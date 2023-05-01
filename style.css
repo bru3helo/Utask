@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.barra{
+    background-color: #226ed8;
+    width: 100%;
+}
+
+.Utask{
+    font-size: 30px;
+    color: #ffff;
+}
