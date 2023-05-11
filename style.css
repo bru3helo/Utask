@@ -94,11 +94,14 @@
 }
 
 .container2{
+    width: 100%;
+    height: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    padding-top: 17
+    /* topo | direita | inferior | esquerda*/
+    margin: 14px 0x 15px 0px;
 }
 
 .direita{
@@ -159,7 +162,7 @@
     letter-spacing: -0.017em;
 }
 
-.feito{
+.feitocom{
     width: 69px;
     height: 21px;
     left: 927px;
@@ -178,9 +181,10 @@
     display: flex;
     align-items: center;
     text-align: center;
-    flex-direction: wrap;
-     /* topo | direita | inferior | esquerda*/
-     padding: 32px 160px 32px 160px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* topo | direita | inferior | esquerda*/
+     padding: 32px 160px 32px 160px; 
 }
 
 .container3{
@@ -198,20 +202,24 @@
 }
 
 .fazer{
-    width: 68px;
     height: 30px;
 
+    text-align: justify;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    line-height: 30px;
-    /* topo | direita | inferior | esquerda*/
-    padding: 0px 195x 0px 160px;
-
     color: #141414;
 }   
 
+/* .add{
+    width: 30px;
+    height: 30px;
+    left: 423px;
+    top: 263px;
+    /* topo | direita | inferior | esquerda
+    padding: 32px 160px 8px 195px;
+} */
 .contaluz{
     width: 253px;
     height: 74px;
@@ -239,34 +247,50 @@
     margin: 0px 20px 25px 20px;
 }
 
-/* 
+ 
 .container4{
     display: flex;
     flex-direction: column;
-
+    width: 293px;
+    height: 375px;
 }
 
-.caixa2{
+.caixabranca{
     width: 293px;
     height: 337px;
     background: #EEEEEE;
     border-radius: 10px;
 }
 
-/* .andamento{
-    width: 68px;
+.andamento{
     height: 30px;
 
+    text-align: justify;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    line-height: 30px;
-    /* topo | direita | inferior | esquerda
-    padding: 0px 195x 0px 160px; 
-
     color: #141414;
-}    */
+}   
+
+.container5{
+    display: flex;
+    flex-direction: column;
+    width: 293px;
+    height: 375px;
+}
+
+.feito{
+    height: 30px;
+
+    text-align: justify;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #141414;
+}   
+
 
 /* .FazerManicure{
     width: 253px;
