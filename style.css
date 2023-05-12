@@ -37,16 +37,21 @@
     height: 40px;
 }
 
+.light{
+    border: none;
+    background-color: transparent;
+}
 
 .caixafrase{
     display: flex;
+    flex-direction: column;
     width: 620px;
     height: 119px;
     background: #FFFFFF;
     box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.04);
     border-radius: 20px;
     /* topo | direita | inferior | esquerda */
-    margin: 32px 500px 0px 160px;
+    margin: 32px 500px 0px 180px;
 }
 
 .alinhar{
@@ -63,30 +68,25 @@
     font-size: 12px;
     line-height: 18px;
     color: #141414;
-    padding-left: 7px;
+    margin-left: 5px;
 }
 
-.iconelamp{
+.logolamp{
     width: 44px;
     height: 44px;
-    left: 176px;
-    top: 128px;
+    margin-left: 16px;
     
 }
 
 .Texto{
-    position: absolute;
     width: 532px;
     height: 63px;
-    left: 210px;
-    top: 152px;
-
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
-
+    margin: -25px 10px 8px 65px;
     color: #141414;
 }
 
@@ -235,6 +235,7 @@
 .meio{
     display: flex;
     align-items: center;
+    margin: 0px 0px 13px 13px;
 }
 
 .baixo{
@@ -252,9 +253,11 @@
 }
 
 .baixolista{
+    width: 300px;
+    height: 36px;
     display: flex;
     align-items: last baseline;
-    padding: 0px 0px 13px 12px;
+    margin: 0px 0px 13px 16px;
 }
 
 .expandir{
@@ -294,6 +297,14 @@
     height: 20px;
     background-color: transparent;
     margin-left: 119.5px;
+    border: none;
+}
+
+.proximo01{
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    margin-left: 45px;
     border: none;
 }
 
@@ -412,9 +423,7 @@
     height: 12px;
 }
 
-.scroll{
-    position: absolute;
-    float: right;
+/* .scroll{
     margin: 20px 6px 47px 8px;
     width: 6px;
     height: 270px;
@@ -422,7 +431,7 @@
     top: 302px;
     background: #C4C4C4;
     border-radius: 20px;
-    }
+    } */
 .descricao{
     width: 80px;
     height: 18px;
@@ -491,4 +500,65 @@
     font-size: 12px;
     line-height: 18px;
     color: #141414;
+}
+
+
+/* RESPONSIVIDADE */
+@media screen and (max-width: 430px){
+    .caixafrase{
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        height: 8%;
+        background: #FFD569;
+        box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.04);
+        border-radius: 10px;
+        /* topo | direita | inferior | esquerda */
+        margin: 30px 44px 30px 44px;
+    }
+
+    .alinhar{
+        display: flex;
+        padding-top: 8px;
+        align-items: center;
+    }
+    
+    .frase{
+        width: 97px;
+        height: 24px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.017em;
+        color: #FFFFFF;
+        text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+        margin-left: 11px;
+    }
+    
+    .logolamp{
+        width: 44px;
+        height: 44px;
+        margin-left: 22px;
+        
+    }
+    
+    .Texto{
+        display: none;
+    }
+
+    .container4{
+        display: none;
+    }
+    
+    .container5{
+        display: none;
+    }
+
+    .container2{
+        flex-direction: column;
+        align-items: start;
+        margin-left: 30px;
+    }
 }
