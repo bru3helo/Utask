@@ -214,16 +214,60 @@
     color: #141414;
 }   
 
+.add{
+    background-color: #FFFFFF;
+    border: none;
+    padding-bottom: 8px;
+}
 
-
-/* .add{
+.img{
     width: 30px;
     height: 30px;
-    left: 423px;
-    top: 263px;
-    /* topo | direita | inferior | esquerda
-    padding: 32px 160px 8px 195px;
-} */
+}
+
+.cima{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 12px 10px 10px 12px; 
+}
+
+.baixo{
+    display: flex;
+    align-items: center;
+    padding: 0px 0px 13px 12px;
+}
+
+.expandir{
+    width: 6px;
+    height: 4px;
+    margin-left: 2px;
+}
+
+.proximo{
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    margin-left: 119.5px;
+    border: none;
+}
+
+.proximo2{
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    margin-left: 9px;
+    border: none;
+}
+
+.voltar{
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    margin-left: 91px;
+    border: none;
+}
+
 .contaluz{
     width: 253px;
     height: 74px;
@@ -275,6 +319,7 @@
     font-weight: 400;
     font-size: 20px;
     color: #141414;
+    margin-bottom: 8px;
 }   
 
 .container5{
@@ -292,6 +337,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
+    margin-bottom: 8px;
     color: #141414;
 }   
 
@@ -305,29 +351,30 @@
 }
 
 .Pagarluz{
-    text-align: justify;
-    padding-left: 12px;
+    width: 192px;
+    height: 21px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
     color: #141414;
+    text-align: left;
+    margin-right: 23px;
+}
 
-    padding: 12px 41px 0px 12px;
+.pontinhos{
+    width: 4px;
+    height: 12px;
 }
 
 .descricao{
+    width: 80px;
     height: 18px;
-    left: 12px;
-    top: 43px;
-
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 300;
     font-size: 12px;
-    text-align: justify;
-    padding: 10px 0px 13px 12px;
-
+    margin-left: 3.5px;
     color: #141414;
 }
 
@@ -343,27 +390,27 @@
 }
 
 .pagarmercado{
-    text-align: justify;
-    padding-left: 12px;
+    width: 209px;
+    height: 21px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
     color: #141414;
-
-    padding: 12px 41px 0px 12px;
+    text-align: left;
+    margin-right: 6px;
 }
 
 .fazerman{
-    text-align: justify;
-    padding-left: 12px;
+    width: 192px;
+    height: 21px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
     color: #141414;
-
-    padding: 12px 41px 0px 12px;
+    text-align: left;
+    margin-right: 23px;
 }
 
 .esconder{
