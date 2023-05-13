@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+/* ------------HEADER------------------- */
 
 .barra{
     position: relative;
@@ -42,6 +43,16 @@
     background-color: transparent;
 }
 
+/* ----------------------------- */
+
+/* --------------CAIXA FRASE--------------- */
+/* 
+.caixafrasecont{
+    width: 620px;
+    height: 119px;
+    display: flex;
+    justify-content: center;
+} */
 .caixafrase{
     display: flex;
     flex-direction: column;
@@ -50,8 +61,6 @@
     background: #FFFFFF;
     box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.04);
     border-radius: 20px;
-    /* topo | direita | inferior | esquerda */
-    margin: 32px 500px 0px 180px;
 }
 
 .alinhar{
@@ -90,20 +99,8 @@
     color: #141414;
 }
 
-.container2{
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-}
-
-.direita{
-    display: flex;
-    align-items: center;
-    text-align: center;
-}
+/* ----------------------------- */
+/* ----------FOOTER------------ */
 
 .barra2{
     width: 100%;
@@ -117,30 +114,30 @@
     height: 21px;
     left: 160px;
     top: 684px;
-
+    
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
     margin-right: 210px;
-
+    
     color: #FFFFFF;
 }
 
 .Bruna{
-
+    
     width: 100px;
     height: 21px;
     left: 1021px;
     top: 684px;
-
+    
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
-
+    
     color: #FFFFFF; 
 }
 
@@ -149,7 +146,7 @@
     height: 16px;
     left: 1001px;
     top: 687px;
-
+    
     font-family: 'Material Icons';
     font-style: normal;
     font-weight: 400;
@@ -163,15 +160,25 @@
     height: 21px;
     left: 927px;
     top: 684px;
-
+    
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
-
+    
     color: #FFFFFF;
 }
+
+.container2{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+/* ----------FOOTER------------ */
 
 .Kanban{
     display: flex;
@@ -180,18 +187,35 @@
     justify-content: space-around;
     flex-wrap: wrap;
     /* topo | direita | inferior | esquerda*/
-     padding: 32px 160px 32px 160px; 
+    padding: 32px 160px 32px 160px; 
 }
 
-.branco{
-    padding-bottom: 30px;
-}
 
 .container3{
     display: flex;
     flex-direction: column;
     width: 293px;
     height: 375px;
+}
+
+.container4{
+    display: flex;
+    flex-direction: column;
+    width: 293px;
+    height: 375px;
+}
+
+.container5{
+    display: flex;
+    flex-direction: column;
+    width: 293px;
+    height: 375px;
+}
+
+.direita{
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
 
 .caixa1{
@@ -204,28 +228,6 @@
 .linha{
     display: flex;
     justify-content: space-between;
-}
-
-.fazer{
-    height: 30px;
-
-    text-align: justify;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    color: #141414;
-}   
-
-.add{
-    background-color: #FFFFFF;
-    border: none;
-    padding-bottom: 8px;
-}
-
-.img{
-    width: 30px;
-    height: 30px;
 }
 
 .cima{
@@ -261,6 +263,31 @@
     display: flex;
     align-items: last baseline;
     margin: 0px 0px 13px 16px;
+}
+.branco{
+    padding-bottom: 30px;
+}
+
+.fazer{
+    height: 30px;
+
+    text-align: justify;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #141414;
+}   
+
+.add{
+    background-color: #FFFFFF;
+    border: none;
+    padding-bottom: 8px;
+}
+
+.img{
+    width: 30px;
+    height: 30px;
 }
 
 .expandir{
@@ -354,14 +381,6 @@
     margin: 0px 20px 25px 20px;
 }
 
- 
-.container4{
-    display: flex;
-    flex-direction: column;
-    width: 293px;
-    height: 375px;
-}
-
 .caixabranca{
     width: 293px;
     height: 337px;
@@ -380,13 +399,6 @@
     color: #141414;
     margin-bottom: 8px;
 }   
-
-.container5{
-    display: flex;
-    flex-direction: column;
-    width: 293px;
-    height: 375px;
-}
 
 .feito{
     height: 30px;
@@ -426,15 +438,6 @@
     height: 12px;
 }
 
-/* .scroll{
-    margin: 20px 6px 47px 8px;
-    width: 6px;
-    height: 270px;
-    left: 448px;
-    top: 302px;
-    background: #C4C4C4;
-    border-radius: 20px;
-    } */
 .descricao{
     width: 80px;
     height: 18px;
@@ -515,7 +518,7 @@
 
 /* RESPONSIVIDADE */
 @media screen and (max-width: 375px){
-    
+    /* CAIXA FRASE */
     .container {
         display: flex;
         justify-content: space-around;
@@ -561,6 +564,8 @@
         margin-left: 22px;
     }
     
+/* ===============================================================  */
+    
     .Texto{
         display: none;
     }
@@ -576,7 +581,7 @@
     .container2{
         flex-direction: column;
         align-items: start;
-
+        margin-left: 20px;
     }
     
     .Kanban{

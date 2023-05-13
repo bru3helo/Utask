@@ -14,7 +14,7 @@
 
       </head>
 
-    <body>
+    <body onload="exibirFraseAleatoria()">
         <header class="barra">
             <div class="container">
                 <div class="logo">
@@ -28,18 +28,57 @@
                 </button>
             </div>
         </header>
+        <div class="caixafrasecont">
+            <div class="caixafrase">
+                <div class="alinhar">
+                    <div class="logolamp">
+                    <img src="iconelampada.png">
+                    </div>
+                    <div class="frase">
+                        Frase do dia
+                    </div>
+                </div>
+                <div class="texto">
+                        <p id="frase"></p>
+                        <script>
+                        // Array com frases pre-cadastradas
+                        const frases = [
+                            "Se você quer um pedacinho do paraíso, acredite em Deus. Mas se você quer conquistar o mundo, acredite em você porque Deus já te deu tudo o que você precisa para você vencer.",
+                            "A felicidade não está em fazer o que a gente quer, e sim em querer o que a gente faz.",
+                            "O tempo é uma ilusão. O que realmente importa é o que fazemos com ele.",
+                            "Nunca é tarde demais para ser o que você poderia ter sido.",
+                            "O sucesso é ir de fracasso em fracasso sem perder entusiasmo.",
+                            "Faça hoje tão incrível que ontem tenha inveja.",
+                            "Cada novo dia é uma nova oportunidade de mudar sua vida.",
+                            "Não deixe para amanhã o que você pode fazer hoje.",
+                            "A vida é feita de escolhas. Faça escolhas sábias.",
+                            "Acredite em si mesmo e você será imparável.",
+                            "Não deixe seus medos controlarem sua vida. Enfrente-os e supere-os.",
+                            "A vida é curta demais para desperdiçar tempo com coisas que não importam.",
+                            "Foque no presente e construa um futuro melhor.",
+                            "Seja a mudança que você quer ver no mundo.",
+                            "Não há atalhos para o sucesso. Trabalhe duro e persevere.",
+                            "A felicidade não é algo pronto. Ela é algo que você constrói.",
+                            "A vida é uma aventura. Aproveite cada momento.",
+                            "Cada novo dia é uma nova oportunidade de aprender algo novo.",
+                            "Nunca desista dos seus sonhos. Lute por eles.",
+                            "O sucesso não é final, o fracasso não é fatal. O que importa é a coragem para continuar.",
+                            "A maior glória em viver não está em nunca cair, mas em se levantar a cada queda.",
+                            "Se você quer alcançar grandes coisas, você precisa começar com pequenos passos.",
+                            "O tempo é uma moeda que você pode gastar como quiser. Use-o com sabedoria.",
+                            "Se você está procurando por um milagre, comece por olhar no espelho.",
+                            "Não permita que o medo de fracassar o impeça de tentar.",
 
-        <div class="caixafrase">
-            <div class="alinhar">
-                <div class="logolamp">
-                <img src="iconelampada.png">
+                        ];
+
+                        // Função para exibir uma frase aleatória no elemento HTML
+                        function exibirFraseAleatoria() {
+                            const fraseAleatoria = frases[Math.floor(Math.random() * frases.length)];
+                            const elementoFrase = document.getElementById("frase");
+                            elementoFrase.innerHTML = fraseAleatoria;
+                        }
+                        </script>
                 </div>
-                <div class="frase">
-                    Frase do dia
-                </div>
-            </div>
-            <div class="texto">
-                Se você quer um pedacinho do paraíso, acredite em Deus. Mas se você quer conquistar o mundo, acredite em você porque Deus já te deu tudo o que você precisa para você vencer.
             </div>
         </div>
 
@@ -47,7 +86,7 @@
             <div class="container3">
                 <div class="linha">
                     <div class="fazer">A fazer</div>
-                    <button class="add"> <img class="img" src="[Botão] Adicionar task.png"> </button>
+                    <button class="add" id="adicionar-task"> <img class="img" src="[Botão] Adicionar task.png"> </button>
                 </div>
                 <div class="setaesquerda"><img src="navigate_before.png"></div>
                 <div class="caixa1"> 
@@ -163,8 +202,11 @@
             </div>
             
         </footer>
+        
     </body>
 
+
+    
 
 
 </html>
