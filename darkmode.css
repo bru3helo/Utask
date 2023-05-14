@@ -1,0 +1,613 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ------------HEADER------------------- */
+
+.body{
+    background-color:  #333333;
+}
+
+.barra{
+    position: relative;
+    background-color: #3867D6;
+    width: 100%;
+    height: 80px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 17px;
+}
+
+.Utask{ 
+    width: 147px;
+    height: 45px;
+    color: #ffff;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+}
+
+.logo{
+    width: 23.28px;
+    height: 40px;
+}
+
+.light{
+    border: none;
+    background-color: transparent;
+}
+
+/* ----------------------------- */
+
+/* --------------CAIXA FRASE--------------- */
+/* 
+.caixafrasecont{
+    width: 620px;
+    height: 119px;
+    display: flex;
+    justify-content: center;
+} */
+.caixafrase{
+    display: flex;
+    flex-direction: column;
+    width: 620px;
+    height: 119px;
+    background: #FFFFFF;
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.04);
+    border-radius: 20px;
+}
+
+.alinhar{
+    display: flex;
+    padding-top: 16px;
+}
+
+.frase{
+    width: 75px;
+    height: 18px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+    color: #141414;
+    margin-left: 5px;
+}
+
+.logolamp{
+    width: 44px;
+    height: 44px;
+    margin-left: 16px;
+    
+}
+
+.Texto{
+    width: 532px;
+    height: 63px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    margin: -25px 10px 8px 65px;
+    color: #141414;
+}
+
+/* ----------------------------- */
+/* ----------FOOTER------------ */
+
+.barra2{
+    width: 100%;
+    height: 50px;
+	bottom: 0px;
+    background: #114FA7;
+}
+
+.processo{
+    width: 266px;
+    height: 21px;
+    left: 160px;
+    top: 684px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    margin-right: 210px;
+    
+    color: #FFFFFF;
+}
+
+.Bruna{
+    
+    width: 100px;
+    height: 21px;
+    left: 1021px;
+    top: 684px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    
+    color: #FFFFFF; 
+}
+
+.favorite{
+    width: 16px;
+    height: 16px;
+    left: 1001px;
+    top: 687px;
+    
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: -0.017em;
+}
+
+.feitocom{
+    width: 69px;
+    height: 21px;
+    left: 927px;
+    top: 684px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    
+    color: #FFFFFF;
+}
+
+.container2{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+/* ----------FOOTER------------ */
+
+.Kanban{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* topo | direita | inferior | esquerda*/
+    padding: 32px 160px 32px 160px; 
+}
+
+
+.container3{
+    display: flex;
+    flex-direction: column;
+    width: 293px;
+    height: 375px;
+}
+
+.container4{
+    display: flex;
+    flex-direction: column;
+    width: 293px;
+    height: 375px;
+}
+
+.container5{
+    display: flex;
+    flex-direction: column;
+    width: 293px;
+    height: 375px;
+}
+
+.direita{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.caixa1{
+    width: 293px;
+    height: 337px;
+    background: #EEEEEE;
+    border-radius: 10px;
+}
+
+.linha{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cima{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 12px 10px 10px 12px; 
+}
+
+.meio{
+    display: flex;
+    align-items: center;
+    margin: 0px 0px 13px 13px;
+}
+
+.baixo{
+    display: flex;
+    align-items: center;
+    margin: 0px 0px 13px 16px;
+}
+
+.baixoexcluir{
+    width: 237px;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    margin: 0px 0px 13px 16px;
+}
+
+.baixolista{
+    width: 300px;
+    height: 36px;
+    display: flex;
+    align-items: last baseline;
+    margin: 0px 0px 13px 16px;
+}
+.branco{
+    padding-bottom: 30px;
+}
+
+.fazer{
+    height: 30px;
+
+    text-align: justify;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #141414;
+}   
+
+.add{
+    background-color: #FFFFFF;
+    border: none;
+    padding-bottom: 8px;
+}
+
+.img{
+    width: 30px;
+    height: 30px;
+}
+
+.expandir{
+    width: 6px;
+    height: 4px;
+    margin-left: 2px;
+}
+
+.btexcluir {
+    width: 71px;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    margin-left: 70px;
+    margin-bottom: 20px;
+}
+
+.excluir{
+    width: 38px;
+    height: 18px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    margin-left: 3px;
+    color: #DF0000;
+}
+
+.proximo{
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    margin-left: 119.5px;
+    border: none;
+}
+
+.proximo01{
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    margin-left: 45px;
+    border: none;
+}
+
+.proximo2{
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    margin-left: 9px;
+    border: none;
+}
+
+.voltar{
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    margin-left: 91px;
+    border: none;
+}
+
+.contaluz{
+    width: 253px;
+    height: 74px;
+
+    background: #FFFFFF;
+    border-radius: 10px;
+    margin: 20px 20px 14px 20px;
+}
+
+.compras{
+    width: 253px;
+    height: 116px;
+
+    background: #FFFFFF;
+    border-radius: 10px;
+    margin: 0px 20px 14px 20px;
+}
+
+.manicure{
+    width: 253px;
+    height: 74px;
+
+    background: #FFFFFF;
+    border-radius: 10px;
+    margin: 0px 20px 25px 20px;
+}
+
+.caixabranca{
+    width: 293px;
+    height: 337px;
+    background: #EEEEEE;
+    border-radius: 10px;
+}
+
+.andamento{
+    height: 30px;
+
+    text-align: justify;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #141414;
+    margin-bottom: 8px;
+}   
+
+.feito{
+    height: 30px;
+
+    text-align: justify;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #141414;
+}   
+
+.fazermanicure{
+    width: 253px;
+    height: 74px;
+
+    background: #FFFFFF;
+    border-radius: 10px;
+    margin: 20px 19px 243px 21px;
+}
+
+.Pagarluz{
+    width: 192px;
+    height: 21px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: #141414;
+    text-align: left;
+    margin-right: 23px;
+}
+
+.pontinhos{
+    width: 4px;
+    height: 12px;
+}
+
+.descricao{
+    width: 80px;
+    height: 18px;
+    text-align: left;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+
+    color: #141414;
+}
+
+.popupexcluir{
+    width: 71px;
+    height: 31px;
+    left: 173px;
+    top: 32px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+}
+
+.pagarmercado{
+    width: 209px;
+    height: 21px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: #141414;
+    text-align: left;
+    margin-right: 6px;
+}
+
+.fazerman{
+    width: 192px;
+    height: 21px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: #141414;
+    text-align: left;
+    margin-right: 23px;
+}
+
+.esconder{
+    width: 118px;
+    height: 18px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    margin-left: 3.5px;
+    color: #141414;
+}
+
+.comprar{
+    width: 163px;
+    height: 36px;
+    text-align: left;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #141414;
+}
+
+.setaesquerda{
+    display: none;
+}
+
+.setadireita{
+    display: none;
+}
+
+/* RESPONSIVIDADE */
+@media screen and (max-width: 375px){
+    /* CAIXA FRASE */
+    .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: unset;
+        padding-top: 17px;
+    }
+    
+    .caixafrase{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 75%;
+        height: 8%;
+        background: #FFD569;
+        box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.04);
+        border-radius: 10px;
+        /* topo | direita | inferior | esquerda */
+        margin: 30px 44px 30px 44px;
+    }
+    
+    .alinhar{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0px;
+    }
+    
+    .frase{
+        width: 97px;
+        height: 24px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.017em;
+        color: #FFFFFF;
+        text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+        margin-left: 11px;
+    }
+    
+    .logolamp{
+        margin-left: 22px;
+    }
+    
+/* ===============================================================  */
+    
+    .Texto{
+        display: none;
+    }
+    
+    .container4{
+        display: none;
+    }
+    
+    .container5{
+        display: none;
+    }
+    
+    .container2{
+        flex-direction: column;
+        align-items: start;
+        margin-left: 20px;
+    }
+    
+    .Kanban{
+        padding: 0px;
+        margin: 32px 160px 32px 160px;
+    }
+
+    .setaesquerda{
+        display: block;
+        position: absolute;
+        top: 420;
+        left: 10;
+        right: 335;
+        bottom: 318;
+    }
+    
+    .setadireita{
+        display: block;
+        position: absolute;
+        top: 420;
+        left: 335;
+        right: 10;
+        bottom: 318;
+    }
+}
