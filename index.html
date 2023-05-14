@@ -34,50 +34,12 @@
                     <div class="logolamp">
                     <img src="iconelampada.png">
                     </div>
-                    <div class="frase">
+                    <div id="frasebt">
                         Frase do dia
                     </div>
                 </div>
                 <div class="texto">
                         <p id="frase"></p>
-                        <script>
-                        // Array com frases pre-cadastradas
-                        const frases = [
-                            "Se você quer um pedacinho do paraíso, acredite em Deus. Mas se você quer conquistar o mundo, acredite em você porque Deus já te deu tudo o que você precisa para você vencer.",
-                            "A felicidade não está em fazer o que a gente quer, e sim em querer o que a gente faz.",
-                            "O tempo é uma ilusão. O que realmente importa é o que fazemos com ele.",
-                            "Nunca é tarde demais para ser o que você poderia ter sido.",
-                            "O sucesso é ir de fracasso em fracasso sem perder entusiasmo.",
-                            "Faça hoje tão incrível que ontem tenha inveja.",
-                            "Cada novo dia é uma nova oportunidade de mudar sua vida.",
-                            "Não deixe para amanhã o que você pode fazer hoje.",
-                            "A vida é feita de escolhas. Faça escolhas sábias.",
-                            "Acredite em si mesmo e você será imparável.",
-                            "Não deixe seus medos controlarem sua vida. Enfrente-os e supere-os.",
-                            "A vida é curta demais para desperdiçar tempo com coisas que não importam.",
-                            "Foque no presente e construa um futuro melhor.",
-                            "Seja a mudança que você quer ver no mundo.",
-                            "Não há atalhos para o sucesso. Trabalhe duro e persevere.",
-                            "A felicidade não é algo pronto. Ela é algo que você constrói.",
-                            "A vida é uma aventura. Aproveite cada momento.",
-                            "Cada novo dia é uma nova oportunidade de aprender algo novo.",
-                            "Nunca desista dos seus sonhos. Lute por eles.",
-                            "O sucesso não é final, o fracasso não é fatal. O que importa é a coragem para continuar.",
-                            "A maior glória em viver não está em nunca cair, mas em se levantar a cada queda.",
-                            "Se você quer alcançar grandes coisas, você precisa começar com pequenos passos.",
-                            "O tempo é uma moeda que você pode gastar como quiser. Use-o com sabedoria.",
-                            "Se você está procurando por um milagre, comece por olhar no espelho.",
-                            "Não permita que o medo de fracassar o impeça de tentar.",
-
-                        ];
-
-                        // Função para exibir uma frase aleatória no elemento HTML
-                        function exibirFraseAleatoria() {
-                            const fraseAleatoria = frases[Math.floor(Math.random() * frases.length)];
-                            const elementoFrase = document.getElementById("frase");
-                            elementoFrase.innerHTML = fraseAleatoria;
-                        }
-                        </script>
                 </div>
             </div>
         </div>
@@ -86,7 +48,7 @@
             <div class="container3">
                 <div class="linha">
                     <div class="fazer">A fazer</div>
-                    <button class="add" id="adicionar-task"> <img class="img" src="[Botão] Adicionar task.png"> </button>
+                    <button id="addbt"> <img class="img" src="[Botão] Adicionar task.png"> </button>
                 </div>
                 <div class="setaesquerda"><img src="navigate_before.png"></div>
                 <div class="caixa1"> 
@@ -143,8 +105,8 @@
                             <button class="proximo"><img class="prox" src="[Botão] Próximo.png"></button>
                         </div>
                     </div>
-                    <div class="setadireita"><img src="navigate_next.png"></div>
                 </div>
+                <div class="setadireita"><img src="navigate_next.png"></div>
             </div>
             
             <div class="container4">
@@ -165,7 +127,7 @@
                     </div>
                 </div>
             </div>
-
+            
             <div class="container5">
                 <div class="feito">Feito </div>
                 <div class="caixa1"> 
@@ -187,7 +149,7 @@
             </div>
 
         </div>
-
+        
         <div class="branco"></div>
         
         <footer class="barra2">
@@ -203,10 +165,127 @@
             
         </footer>
         
-    </body>
-
-
+        <div class="popup-wrapper">
+            <div class="popup">
+                <div class="popup-close">
+                    <img class="btclose" src="[Botão] Fechar.png">
+                </div>
     
+                <div class="popup-content">
+                    <h2 class="txtnovatask">Nova Task</h2>
+                    <div class="bluebar"></div>
+                    <div class="titulo">Título *</div>
+                    <div class="campocinza1">
+                        <p class="txttitulo">Enviar depoimento para o site da Unect</p>
+                    </div>
+                    <div class="popdescricao">Descrição</div>
+                    <div class="campocinza2">
+                        <p class="txtdescricao">
+                            Eu achava que precisava entrar na Unect para ser uma pessoa melhor, mas vi que precisava ser uma pessoa melhor para entrar na Unect.
+                        </p>
+                    </div>
+                    <button class="btaddtask">
+                        <div class="criartask">Criar task</div>
+                    </button>
+                </div>
+            </div>
+        </div>
 
+        <script>
+            // Seleciona o botão de adicionar tarefa
+            const addbt = document.getElementById("addbt");
+            // Seleciona a div de popup
+            const popup = document.querySelector(".popup-wrapper");
+            // Seleciona o botão de fechar a popup
+            const closebt = document.querySelector(".popup-close");
+            // Adiciona evento de clique ao botão de adicionar tarefa para exibir a popup
+            addbt.addEventListener("click", function() {
+            popup.style.display = "block";
+            });
+            
+            // Adiciona evento de clique ao botão de fechar a popup para escondê-la
+            closebt.addEventListener("click", function() {
+            popup.style.display = "none";
+            });
 
+        </script>
+
+        <div class="popup-frasedia" onload="exibirFraseAleatoriaPop()">
+            <div class="popupfrase">
+                <div class="popup-closefrase">
+                    <img class="btclosefrase" src="[Botão] Fechar.png">
+                </div>
+    
+                <div class="popup-contentfrase">
+                    <div class="logolamppop">
+                        <img src="iconelampada.png">
+                    </div>
+                    <div class="frasepop">Frase do dia</div>
+                    <div id="frasespop"></div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Seleciona o botão de adicionar tarefa
+            const frase = document.getElementById("frasebt");
+            // Seleciona a div de popup
+            const popupfrase = document.querySelector(".popup-frasedia");
+            // Seleciona o botão de fechar a popup
+            const btclosefrase = document.querySelector(".btclosefrase");
+            // Adiciona evento de clique ao botão de adicionar tarefa para exibir a popup
+            frase.addEventListener("click", function() {
+            popupfrase.style.display = "block";
+            });
+            
+            // Adiciona evento de clique ao botão de fechar a popup para escondê-la
+            btclosefrase.addEventListener("click", function() {
+            popupfrase.style.display = "none";
+            });
+
+        </script>
+        <script>
+            // Array com frases pre-cadastradas
+            const frases = [
+                "Se você quer um pedacinho do paraíso, acredite em Deus. Mas se você quer conquistar o mundo, acredite em você porque Deus já te deu tudo o que você precisa para você vencer.",
+                "A felicidade não está em fazer o que a gente quer, e sim em querer o que a gente faz.",
+                "O tempo é uma ilusão. O que realmente importa é o que fazemos com ele.",
+                "Nunca é tarde demais para ser o que você poderia ter sido.",
+                "O sucesso é ir de fracasso em fracasso sem perder entusiasmo.",
+                "Faça hoje tão incrível que ontem tenha inveja.",
+                "Cada novo dia é uma nova oportunidade de mudar sua vida.",
+                "Não deixe para amanhã o que você pode fazer hoje.",
+                "A vida é feita de escolhas. Faça escolhas sábias.",
+                "Acredite em si mesmo e você será imparável.",
+                "Não deixe seus medos controlarem sua vida. Enfrente-os e supere-os.",
+                "A vida é curta demais para desperdiçar tempo com coisas que não importam.",
+                "Foque no presente e construa um futuro melhor.",
+                "Seja a mudança que você quer ver no mundo.",
+                "Não há atalhos para o sucesso. Trabalhe duro e persevere.",
+                "A felicidade não é algo pronto. Ela é algo que você constrói.",
+                "A vida é uma aventura. Aproveite cada momento.",
+                "Cada novo dia é uma nova oportunidade de aprender algo novo.",
+                "Nunca desista dos seus sonhos. Lute por eles.",
+                "O sucesso não é final, o fracasso não é fatal. O que importa é a coragem para continuar.",
+                "A maior glória em viver não está em nunca cair, mas em se levantar a cada queda.",
+                "Se você quer alcançar grandes coisas, você precisa começar com pequenos passos.",
+                "O tempo é uma moeda que você pode gastar como quiser. Use-o com sabedoria.",
+                "Se você está procurando por um milagre, comece por olhar no espelho.",
+                "Não permita que o medo de fracassar o impeça de tentar.",
+
+            ];
+
+            // Função para exibir uma frase aleatória no elemento HTML
+            function exibirFraseAleatoria() {
+                const fraseAleatoria = frases[Math.floor(Math.random() * frases.length)];
+                const elementoFrase = document.getElementById("frase");
+                elementoFrase.innerHTML = fraseAleatoria;
+            }
+            function exibirFraseAleatoriaPop() {
+                const fraseAleatoriapop = frases[Math.floor(Math.random() * frases.length)];
+                const elementoFrasepop = document.getElementById("frasespop");
+                elementoFrasepop.innerHTML = fraseAleatoriapop;
+            }
+            </script>
+    </body>
 </html>
