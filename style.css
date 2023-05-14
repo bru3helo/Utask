@@ -767,10 +767,9 @@
     }
     
     .container2{
-        width: 353px;
+        padding-left: 20px;
         flex-direction: column;
         align-items: start;
-        margin-left: 20px;
     }
     
     .Kanban{
