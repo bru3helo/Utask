@@ -46,7 +46,6 @@
 /* ----------------------------- */
 
 /* --------------CAIXA FRASE--------------- */
-
 .caixafrase{
     display: flex;
     flex-direction: column;
@@ -174,7 +173,7 @@
 }
 /* ----------FOOTER------------ */
 
-.Kanban{
+#Kanban{
     display: flex;
     align-items: center;
     text-align: center;
@@ -217,6 +216,13 @@
     height: 337px;
     background: #EEEEEE;
     border-radius: 10px;
+}
+
+#scroll{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-color: #c4c4c4;
+    scroll-behavior: smooth;
 }
 
 .linha{
@@ -705,7 +711,7 @@
 /* ===================================== */
 
 /* RESPONSIVIDADE */
-@media screen and (max-width: 375px){
+@media screen and (max-width: 600px){
     /* CAIXA FRASE */
     .container {
         display: flex;

@@ -44,70 +44,72 @@
             </div>
         </div>
 
-        <div class="Kanban">
-            <div class="container3">
+        <div id="Kanban">
+            <section class="container3">
                 <div class="linha">
                     <div class="fazer">A fazer</div>
                     <button id="addbt"> <img class="img" src="[Botão] Adicionar task.png"> </button>
                 </div>
                 <div class="setaesquerda"><img src="navigate_before.png"></div>
                 <div class="caixa1"> 
-                    <div class="contaluz">
-                        <!-- parte de cima da caixa -->
-                        <div class="cima">
-                            <div class="Pagarluz"> Pagar conta de luz </div>
-                            <div class="pontinhos"><img src="more_vert.png"></div>
-                        </div>
+                    <div id="scroll">
+                            <div class="contaluz">
+                            <!-- parte de cima da caixa -->
+                            <div class="cima">
+                                <div class="Pagarluz"> Pagar conta de luz </div>
+                                <div class="pontinhos"><img src="more_vert.png"></div>
+                            </div>
 
-                        <!-- parte de baixo da caixa -->
-                        <div class="baixoexcluir">
-                            <div class="descricao">Ler descrição</div>
-                            <div class="expandir"><img class="vetorexpandir" src="expand_more.png"></div>
-                            <button class="btexcluir">
-                                <div class="imgexcluir"><img src="delete_outline.png"></div>
-                                <div class="excluir">Excluir</div>
-                            </button>
+                            <!-- parte de baixo da caixa -->
+                            <div class="baixoexcluir">
+                                <div class="descricao">Ler descrição</div>
+                                <div class="expandir"><img class="vetorexpandir" src="expand_more.png"></div>
+                                <button class="btexcluir">
+                                    <div class="imgexcluir"><img src="delete_outline.png"></div>
+                                    <div class="excluir">Excluir</div>
+                                </button>
+                            </div>
                         </div>
-                        <div class="scroll"></div>
+                        
+                        <div class="compras">
+                            <!-- parte de cima da caixa -->
+                            <div class="cima">
+                                <div class="pagarmercado">Fazer compras no mercado</div>
+                                <div class="pontinhos"><img class="vetorexpandir" src="more_vert.png"></div>
+                            </div>
+                            
+                            <div class="meio">
+                                <div class="esconder">Esconder descrição</div>
+                                <div class="expandir"><img class="vetorexpandir" src="expand_less.png"></div>
+                            </div>
+                            
+                            <!-- parte de baixo da caixa -->
+                            <div class="baixolista">
+                                <div class="comprar">Comprar batata, cenoura, feijão, alho, arroz e pipoca.</div>
+                                <button class="proximo01"><img class="prox" src="[Botão] Próximo.png"></button>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="manicure">
+                            <!-- parte de cima da caixa -->
+                            <div class="cima">
+                                <div class="fazerman">Fazer manicure</div>
+                                <div class="pontinhos"><img src="more_vert.png"></div>
+                            </div>
+                            
+                            <!-- parte de baixo da caixa -->
+                            <div class="baixo">
+                                <div class="descricao">Ler descrição</div>
+                                <div class="expandir"><img class="vetorexpandir" src="expand_more.png"></div>
+                                <button class="proximo"><img class="prox" src="[Botão] Próximo.png"></button>
+                            </div>
+                        </div>
                     </div>
                     
-                    <div class="compras">
-                        <!-- parte de cima da caixa -->
-                        <div class="cima">
-                            <div class="pagarmercado">Fazer compras no mercado</div>
-                            <div class="pontinhos"><img class="vetorexpandir" src="more_vert.png"></div>
-                        </div>
-                        
-                        <div class="meio">
-                            <div class="esconder">Esconder descrição</div>
-                            <div class="expandir"><img class="vetorexpandir" src="expand_less.png"></div>
-                        </div>
-                        
-                        <!-- parte de baixo da caixa -->
-                        <div class="baixolista">
-                            <div class="comprar">Comprar batata, cenoura, feijão, alho, arroz e pipoca.</div>
-                            <button class="proximo01"><img class="prox" src="[Botão] Próximo.png"></button>
-                        </div>
-                        
-                    </div>
-                    
-                    <div class="manicure">
-                        <!-- parte de cima da caixa -->
-                        <div class="cima">
-                            <div class="fazerman">Fazer manicure</div>
-                            <div class="pontinhos"><img src="more_vert.png"></div>
-                        </div>
-                        
-                        <!-- parte de baixo da caixa -->
-                        <div class="baixo">
-                            <div class="descricao">Ler descrição</div>
-                            <div class="expandir"><img class="vetorexpandir" src="expand_more.png"></div>
-                            <button class="proximo"><img class="prox" src="[Botão] Próximo.png"></button>
-                        </div>
-                    </div>
                 </div>
                 <div class="setadireita"><img src="navigate_next.png"></div>
-            </div>
+            </section>
             
             <div class="container4">
                 <div class="andamento">Em andamento </div>
@@ -175,21 +177,39 @@
                     <h2 class="txtnovatask">Nova Task</h2>
                     <div class="bluebar"></div>
                     <div class="titulo">Título *</div>
-                    <div class="campocinza1">
-                        <p class="txttitulo">Enviar depoimento para o site da Unect</p>
-                    </div>
+                    <section class="campocinza1">
+                        <input id="inputtitulo"></input>
+                    </section>
                     <div class="popdescricao">Descrição</div>
-                    <div class="campocinza2">
-                        <p class="txtdescricao">
-                            Eu achava que precisava entrar na Unect para ser uma pessoa melhor, mas vi que precisava ser uma pessoa melhor para entrar na Unect.
-                        </p>
-                    </div>
-                    <button class="btaddtask" id="criarTask">
-                        <div class="criartask">Criar task</div>
-                    </button>
+                    <section class="campocinza2">
+                        <input id="txtdescricao"></input>
+                    </section>
+                    <button class="btaddtask" id="criarTask" onclick="lista()">Criar task</button>
                 </div>
             </div>
         </div>
+
+        <script>
+            function lista(){
+            const titulo = document.getElementById('inputtitulo');
+            const valorTitulo = titulo.value;
+            titulo.value = "";
+            console.log(valorTitulo);
+            const descricao = document.getElementById('txtdescricao');
+            const valorDescricao = descricao.value;
+            descricao.value = "";
+            console.log(valorDescricao);
+
+            const fazer = document.getElementById('scroll');
+
+            const div = document.createElement('div');
+            fazer.appendChild(div);
+
+            const p = document.createElement('p');
+            p.innerHTML = valorTitulo;
+            div.appendChild;
+        }
+        </script>
 
         <script>
             // Seleciona o botão de adicionar tarefa
@@ -207,18 +227,15 @@
             closebt.addEventListener("click", function() {
             popup.style.display = "none";
             });
-            const criarTaskBtn = document.getElementById("criarTask");
-
-            // Adiciona um evento de clique ao botão "Criar task"
-            criarTaskBtn.addEventListener("click", function() {
-            adicionarTarefa();
+            criarTask.addEventListener("click", function() {
+            popup.style.display = "none";
             });
         </script>
 
         <!-- <script>
             function adicionarTarefa() {
             // Selecione o campo de título da nova tarefa
-            const tituloCampo = document.querySelector('.campocinza1 .txttitulo');
+            const tituloCampo = document.querySelector('.campocinza1 .inputtitulo');
 
             // Selecione o campo de descrição da nova tarefa
             const descricaoCampo = document.querySelector('.campocinza2 .txtdescricao');
@@ -327,5 +344,6 @@
                 elementoFrasepop.innerHTML = fraseAleatoriapop;
             }
         </script>
+
     </body>
 </html>
