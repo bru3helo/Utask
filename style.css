@@ -273,14 +273,6 @@
     color: #FFFFFF;
 }
 
-.baixolista{
-    width: 300px;
-    height: 36px;
-    display: flex;
-    align-items: last baseline;
-    margin: 0px 0px 13px 16px;
-}
-
 .fazer{
     height: 30px;
 
@@ -359,14 +351,6 @@
     cursor: pointer;
 }
 
-.proximo2{
-    width: 20px;
-    height: 20px;
-    background-color: transparent;
-    margin-left: 9px;
-    border: none;
-}
-
 .voltar{
     width: 20px;
     height: 20px;
@@ -382,22 +366,6 @@
     background: #FFFFFF;
     border-radius: 10px;
     margin: 20px 20px 14px 20px;
-}
-
-.compras{
-    width: 253px;
-    height: 116px;
-
-    background: #FFFFFF;
-    border-radius: 10px;
-    margin: 0px 20px 14px 20px;
-}
-
-.caixabranca{
-    width: 293px;
-    height: 337px;
-    background: #EEEEEE;
-    border-radius: 10px;
 }
 
 .andamento{
@@ -423,16 +391,6 @@
     margin-bottom: 8px;
     color: #141414;
 }   
-
-.fazermanicure{
-    width: 253px;
-    height: 74px;
-
-    background: #FFFFFF;
-    border-radius: 10px;
-    margin: 20px 19px 243px 21px;
-}
-
 .tasktitilo{
     width: 192px;
     height: 21px;
@@ -444,7 +402,6 @@
     text-align: left;
     margin-right: 23px;
 }
-
 
 
 .descricao{

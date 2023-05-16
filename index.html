@@ -51,86 +51,21 @@
                     <button id="addbt"> <img class="img" src="[Botão] Adicionar task.png"> </button>
                 </div>
                 <div class="setaesquerda"><img src="navigate_before.png"></div>
-                <div class="caixa1"> 
-                    <div id="scroll">
-                            <!-- <div class="task">
-
-                            <div class="cima">
-                                <div class="tasktitilo"> Pagar conta de luz </div>
-                                <button id="material-icons"><img src="more_vert.png"></button>
-                            </div>
-
-
-                            <div class="baixo">
-                                <div class="descricao">Ler descrição</div>
-                                <button class="expandir"><img class="vetorexpandir" src="expand_more.png"></button>
-                            </div>
-                        </div>
-                        
-                        <div class="compras">
-
-                            <div class="cima">
-                                <div class="pagarmercado">Fazer compras no mercado</div>
-                                <button id="material-icons"><img src="more_vert.png"></button>
-                            </div>
-                            
-                            <div class="meio">
-                                <div class="esconder">Esconder descrição</div>
-                                <div class="expandir"><img class="vetorexpandir" src="expand_less.png"></div>
-                            </div>
-                            
-
-                            <div class="baixolista">
-                                <div class="comprar">Comprar batata, cenoura, feijão, alho, arroz e pipoca.</div>
-                                <button class="proximo01"><img class="prox" src="[Botão] Próximo.png"></button>
-                            </div>
-                            
-                        </div> -->        
-                    </div>
-                    
-                </div>
-                <div class="setadireita"><img src="navigate_next.png"></div>
+                <div class="caixa1" id="fazer">
+                    <div id="scroll"></div>
+                    <div class="setadireita"><img src="navigate_next.png"></div>
+                </div>     
+                </section>
+            
+            <section class="container4">
+                <div class="andamento">Em andamento </div>
+                <div class="caixa1" id="andamento"> </div>
             </section>
             
-            <div class="container4">
-                <div class="andamento">Em andamento </div>
-                <div class="caixa1"> 
-                    <div class="fazermanicure">
-                        <!-- parte de baixo da caixa -->
-                        <div class="cima">  
-                            <div class="fazerman">Fazer manicure</div>
-                            <button id="material-icons"><img src="more_vert.png"></button>
-                        </div>  
-                        <!-- parte de baixo da caixa -->
-                        <div class="baixo">
-                            <div class="descricao">Ler descrição</div>
-                            <div class="expandir"><img class="vetorexpandir" src="expand_more.png"></div>
-                            <button class="voltar"><img class="volt" src="[Botão] Voltar.png"></button>
-                            <button class="proximo2"><img class="prox" src="[Botão] Próximo.png"></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="container5">
+            <section class="container5">
                 <div class="feito">Feito </div>
-                <div class="caixa1"> 
-                    <!-- <div class="fazermanicure">
-                        <div class="cima">  
-                            <div class="fazerman">Fazer manicure</div>
-                            <span class="material-icons" id=more >more_vert</span>
-                        </div>  
-
-                        <div class="baixo">
-                            <div class="descricao">Ler descrição</div>
-                            <div class="expandir"><img class="vetorexpandir" src="expand_more.png"></div>
-                            <button class="voltar"><img class="volt" src="[Botão] Voltar.png"></button>
-                            <button class="proximo2"><img class="prox" src="[Botão] Próximo (1).png"></button>
-                        </div>
-                    </div> -->
-                    
-                </div>
-            </div>
+                <div class="caixa1" id="feito"></div>
+            </section>
 
         </div>
         
@@ -167,93 +102,110 @@
                     <section class="campocinza2">
                         <input id="txtdescricao"></input>
                     </section>
-                    <button class="btaddtask" id="criarTask" onclick="lista()">Criar task</button>
+                    <button class="btaddtask" id="criarTask" onclick="lista(contador)">Criar task</button>
                 </div>
             </div>
         </div>
-        <script>
-            function lista() {
-                const titulo = document.getElementById('inputtitulo');
-                const valorTitulo = titulo.value;
-                titulo.value = "";
-                console.log(valorTitulo);
-                const descricao = document.getElementById('txtdescricao');
-                const valorDescricao = descricao.value;
-                descricao.value = "";
-                console.log(valorDescricao);
-            
-                const fazer = document.getElementById('scroll');
-            
-                const caixa = document.createElement('div');
-                caixa.classList.add('task');
-                fazer.appendChild(caixa);
 
-                const cima = document.createElement('div');
-                cima.classList.add('cima');
-                caixa.appendChild(cima);
-            
-                const tit = document.createElement('div');
-                tit.classList.add('tasktitilo');
-                tit.innerHTML = valorTitulo;
-                cima.appendChild(tit);
+    <script>
+        let contadorExclusao = 0;
+        let contadortasks = 0;
+        let contador= 0;
+        function lista(contador) {
+            contadortasks++;
+            console.log(contadortasks);
+            const titulo = document.getElementById('inputtitulo');
+            const valorTitulo = titulo.value;
+            titulo.value = "";
+            console.log(valorTitulo);
+            const descricao = document.getElementById('txtdescricao');
+            const valorDescricao = descricao.value;
+            descricao.value = "";
+            console.log(valorDescricao);
 
-                const more = document.createElement('span');
-                more.innerHTML = '<span class="material-icons" id= more >more_vert</span>';
-                cima.appendChild(more);
-                
-                const baixo = document.createElement('div');
-                baixo.classList.add('baixo');
-                caixa.appendChild(baixo);
+            const fazer = document.getElementById('scroll');
+            fazer.classList.add(`afazer-${contadortasks}`);
 
-                const des = document.createElement('div');
-                des.classList.add('descricao');
-                des.innerHTML = "Ler descrição";
-                baixo.appendChild(des);
+            const caixa = document.createElement('div');
+            caixa.classList.add('task', `afazer-${contadortasks}`);
+            fazer.appendChild(caixa);
 
-                const expand = document.createElement('span');
-                expand.innerHTML = '<span class="material-icons-outlined" id=expand >expand_more</span>';
-                baixo.appendChild(expand);
+            const cima = document.createElement('div');
+            cima.classList.add('cima', `afazer-${contadortasks}`);
+            caixa.appendChild(cima);
 
-                const prox = document.createElement('button');
-                prox.classList.add('proximo');
-                baixo.appendChild(prox);
+            const tit = document.createElement('div');
+            tit.classList.add('tasktitilo', `afazer-${contadortasks}`);
+            tit.innerHTML = valorTitulo;
+            cima.appendChild(tit);
 
-                const seta = document.createElement('span');
-                seta.innerHTML = '<span class="material-icons-outlined" id=seta>arrow_forward_ios</span>';
-                prox.appendChild(seta);
+            const more = document.createElement('span');
+            more.innerHTML = `<span class="material-icons afazer-${contadortasks}" id="more">more_vert</span>`;
+            cima.appendChild(more);
 
+            const baixo = document.createElement('div');
+            baixo.classList.add('baixo', `afazer-${contadortasks}`);
+            caixa.appendChild(baixo);
 
-                const option = document.getElementById("more");
-            
-                option.addEventListener("click", function() {
-                if (!document.getElementById("btdel")) {
-                    const btdel = document.createElement('button');
-                    btdel.id = "btdel";
-                    btdel.classList.add('btexcluir');
-                    baixo.appendChild(btdel);
+            const des = document.createElement('div');
+            des.classList.add('descricao', `afazer-${contadortasks}`);
+            des.innerHTML = "Ler descrição";
+            baixo.appendChild(des);
 
-                    const icondel = document.createElement('span');
-                    icondel.innerHTML = '<span class="material-icons-outlined" id="icondel">delete_outline</span>';
-                    btdel.appendChild(icondel);
+            const expand = document.createElement('span');
+            expand.innerHTML = `<span class="material-icons-outlined afazer-${contadortasks}" id="expand">expand_more</span>`;
+            baixo.appendChild(expand);
 
-                    const excluir = document.createElement('div');
-                    excluir.classList.add('excluir');
-                    excluir.innerHTML = "Excluir";
-                    btdel.appendChild(excluir);
-                }
-                });
+            const prox = document.createElement('button');
+            prox.classList.add('proximo');
+            prox.id = `btproximo-${contador}`;
+            baixo.appendChild(prox);
 
+            const seta = document.createElement('span');
+            seta.innerHTML = `<span class="material-icons-outlined afazer-${contadortasks}" id="seta">arrow_forward_ios</span>`;
+            prox.appendChild(seta);
 
+            const option = document.getElementById("more");
+
+            option.addEventListener("click", function() {
+            if (!document.getElementById(`btdel-${contadortasks}`)) {
+                contadorExclusao++;
+                const btdel = document.createElement('button');
+                btdel.id = `btdel-${contadortasks}-${contadorExclusao}`;
+                btdel.classList.add('btexcluir', `afazer-${contadortasks}`);
+                baixo.appendChild(btdel);
+
+                const icondel = document.createElement('span');
+                icondel.innerHTML = `<span class="material-icons-outlined afazer-${contadortasks}" id="icondel">delete_outline</span>`;
+                btdel.appendChild(icondel);
+
+                const excluir = document.createElement('div');
+                excluir.classList.add('excluir', `afazer-${contadortasks}`);
+                excluir.innerHTML = "Excluir";
+                btdel.appendChild(excluir);
             }
-            
-          </script>
-          
+            });
 
-        <!-- <button class="btexcluir" id="btexcluir">
-          <div class="imgexcluir"><img src="delete_outline.png"></div>
-          <div class="excluir">Excluir</div>
-        </button> -->
+            prox.addEventListener('click', function() {
+            const btnProximo = this; // Botão clicado (próximo)
+            const divOrigem = btnProximo.closest('.task'); // Encontra a div de origem mais próxima
 
+            if (divOrigem) {
+                const divDestino = document.getElementById('andamento');
+
+                // Remove a task da seção de origem
+                divOrigem.parentNode.removeChild(divOrigem);
+
+                // Adiciona a task na seção de destino
+                divDestino.appendChild(divOrigem);
+            }
+            });
+
+
+
+        }   
+    </script>
+    
         <script>
             // Seleciona o botão de adicionar tarefa
             const addbt = document.getElementById("addbt");
