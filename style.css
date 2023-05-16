@@ -3,9 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-/* ------------HEADER------------------- */
-
 .barra{
     position: relative;
     background-color: #226ed8;
@@ -43,9 +40,6 @@
     background-color: transparent;
 }
 
-/* ----------------------------- */
-
-/* --------------CAIXA FRASE--------------- */
 .caixafrase{
     display: flex;
     flex-direction: column;
@@ -91,9 +85,6 @@
     margin: -25px 10px 8px 65px;
     color: #141414;
 }
-
-/* ----------------------------- */
-/* ----------FOOTER------------ */
 
 .barra2{
     width: 100%;
@@ -171,7 +162,6 @@
     align-items: center;
     text-align: center;
 }
-/* ----------FOOTER------------ */
 
 #Kanban{
     display: flex;
@@ -182,7 +172,6 @@
     /* topo | direita | inferior | esquerda*/
     padding: 32px 160px 32px 160px; 
 }
-
 
 .container3{
     display: flex;
@@ -229,7 +218,6 @@
     display: flex;
     justify-content: space-between;
 }
-
 .cima{
     display: flex;
     align-items: center;
@@ -249,12 +237,40 @@
     margin: 0px 0px 13px 16px;
 }
 
-.baixoexcluir{
-    width: 237px;
-    height: 31px;
-    display: flex;
-    align-items: center;
-    margin: 0px 0px 13px 16px;
+#more{
+    width: 16px;
+    height: 16px;
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #141414;
+    cursor: pointer;
+}
+
+#expand{
+    width: 12px;
+    height: 12px;
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: -0.017em;
+    color: #141414;
+    cursor: pointer;
+}
+
+#seta{
+    width: 16px;
+    height: 16px;
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 16px;
+    color: #FFFFFF;
 }
 
 .baixolista{
@@ -263,9 +279,6 @@
     display: flex;
     align-items: last baseline;
     margin: 0px 0px 13px 16px;
-}
-.branco{
-    padding-bottom: 30px;
 }
 
 .fazer{
@@ -297,17 +310,29 @@
 }
 
 .btexcluir {
-    width: 71px;
-    height: 31px;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 71px;
+    height: 31px;
     border: none;
-    background: #FFFFFF;
+    background-color: #FFFFFF;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
-    margin-left: 70px;
-    margin-bottom: 20px;
+    position: absolute;
+    left: 365px;
+    top: 325px;
+}
+
+#icondel{
+    width: 16px;
+    height: 16px;
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #DF0000;
 }
 
 .excluir{
@@ -323,19 +348,15 @@
 }
 
 .proximo{
+    align-items: center;
+    justify-content: center;
     width: 20px;
     height: 20px;
-    background-color: transparent;
-    margin-left: 119.5px;
+    background-color: #226ed8;
+    margin-left: 110px;
     border: none;
-}
-
-.proximo01{
-    width: 20px;
-    height: 20px;
-    background-color: transparent;
-    margin-left: 45px;
-    border: none;
+    border-radius: 20px;
+    cursor: pointer;
 }
 
 .proximo2{
@@ -354,7 +375,7 @@
     border: none;
 }
 
-.contaluz{
+.task{
     width: 253px;
     height: 74px;
 
@@ -370,15 +391,6 @@
     background: #FFFFFF;
     border-radius: 10px;
     margin: 0px 20px 14px 20px;
-}
-
-.manicure{
-    width: 253px;
-    height: 74px;
-
-    background: #FFFFFF;
-    border-radius: 10px;
-    margin: 0px 20px 25px 20px;
 }
 
 .caixabranca{
@@ -421,7 +433,7 @@
     margin: 20px 19px 243px 21px;
 }
 
-.Pagarluz{
+.tasktitilo{
     width: 192px;
     height: 21px;
     font-family: 'Poppins';
@@ -433,10 +445,7 @@
     margin-right: 23px;
 }
 
-.pontinhos{
-    width: 4px;
-    height: 12px;
-}
+
 
 .descricao{
     width: 80px;
@@ -450,41 +459,6 @@
     color: #141414;
 }
 
-.popupexcluir{
-    width: 71px;
-    height: 31px;
-    left: 173px;
-    top: 32px;
-
-    background: #FFFFFF;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 4px;
-}
-
-.pagarmercado{
-    width: 209px;
-    height: 21px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    color: #141414;
-    text-align: left;
-    margin-right: 6px;
-}
-
-.fazerman{
-    width: 192px;
-    height: 21px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    color: #141414;
-    text-align: left;
-    margin-right: 23px;
-}
-
 .esconder{
     width: 118px;
     height: 18px;
@@ -495,19 +469,6 @@
     margin-left: 3.5px;
     color: #141414;
 }
-
-.comprar{
-    width: 163px;
-    height: 36px;
-    text-align: left;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 18px;
-    color: #141414;
-}
-
 .setaesquerda{
     display: none;
 }
@@ -685,24 +646,14 @@
     border-radius: 20px;
 }
 
-.criartask{    
-    width: 67px;
-    height: 21px;
-
+#criartask{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
-    /* identical to box height */
-
-    display: flex;
-    align-items: center;
-    text-align: center;
-
     color: #FFFFFF;
 }
-/* ===================================== */
 
 /* ===============POPUP FRASE================== */
 .popup-frasedia{

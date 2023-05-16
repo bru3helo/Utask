@@ -9,9 +9,9 @@
             @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap');
-
         </style>
-
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
       </head>
 
     <body onload="exibirFraseAleatoria()">
@@ -53,29 +53,25 @@
                 <div class="setaesquerda"><img src="navigate_before.png"></div>
                 <div class="caixa1"> 
                     <div id="scroll">
-                            <div class="contaluz">
-                            <!-- parte de cima da caixa -->
+                            <!-- <div class="task">
+
                             <div class="cima">
-                                <div class="Pagarluz"> Pagar conta de luz </div>
-                                <div class="pontinhos"><img src="more_vert.png"></div>
+                                <div class="tasktitilo"> Pagar conta de luz </div>
+                                <button id="material-icons"><img src="more_vert.png"></button>
                             </div>
 
-                            <!-- parte de baixo da caixa -->
-                            <div class="baixoexcluir">
+
+                            <div class="baixo">
                                 <div class="descricao">Ler descrição</div>
-                                <div class="expandir"><img class="vetorexpandir" src="expand_more.png"></div>
-                                <button class="btexcluir">
-                                    <div class="imgexcluir"><img src="delete_outline.png"></div>
-                                    <div class="excluir">Excluir</div>
-                                </button>
+                                <button class="expandir"><img class="vetorexpandir" src="expand_more.png"></button>
                             </div>
                         </div>
                         
                         <div class="compras">
-                            <!-- parte de cima da caixa -->
+
                             <div class="cima">
                                 <div class="pagarmercado">Fazer compras no mercado</div>
-                                <div class="pontinhos"><img class="vetorexpandir" src="more_vert.png"></div>
+                                <button id="material-icons"><img src="more_vert.png"></button>
                             </div>
                             
                             <div class="meio">
@@ -83,28 +79,13 @@
                                 <div class="expandir"><img class="vetorexpandir" src="expand_less.png"></div>
                             </div>
                             
-                            <!-- parte de baixo da caixa -->
+
                             <div class="baixolista">
                                 <div class="comprar">Comprar batata, cenoura, feijão, alho, arroz e pipoca.</div>
                                 <button class="proximo01"><img class="prox" src="[Botão] Próximo.png"></button>
                             </div>
                             
-                        </div>
-                        
-                        <div class="manicure">
-                            <!-- parte de cima da caixa -->
-                            <div class="cima">
-                                <div class="fazerman">Fazer manicure</div>
-                                <div class="pontinhos"><img src="more_vert.png"></div>
-                            </div>
-                            
-                            <!-- parte de baixo da caixa -->
-                            <div class="baixo">
-                                <div class="descricao">Ler descrição</div>
-                                <div class="expandir"><img class="vetorexpandir" src="expand_more.png"></div>
-                                <button class="proximo"><img class="prox" src="[Botão] Próximo.png"></button>
-                            </div>
-                        </div>
+                        </div> -->        
                     </div>
                     
                 </div>
@@ -115,9 +96,10 @@
                 <div class="andamento">Em andamento </div>
                 <div class="caixa1"> 
                     <div class="fazermanicure">
+                        <!-- parte de baixo da caixa -->
                         <div class="cima">  
                             <div class="fazerman">Fazer manicure</div>
-                            <div class="pontinhos"><img src="more_vert.png"></div>
+                            <button id="material-icons"><img src="more_vert.png"></button>
                         </div>  
                         <!-- parte de baixo da caixa -->
                         <div class="baixo">
@@ -133,19 +115,19 @@
             <div class="container5">
                 <div class="feito">Feito </div>
                 <div class="caixa1"> 
-                    <div class="fazermanicure">
+                    <!-- <div class="fazermanicure">
                         <div class="cima">  
                             <div class="fazerman">Fazer manicure</div>
-                            <div class="pontinhos"><img src="more_vert.png"></div>
+                            <span class="material-icons" id=more >more_vert</span>
                         </div>  
-                        <!-- parte de baixo da caixa -->
+
                         <div class="baixo">
                             <div class="descricao">Ler descrição</div>
                             <div class="expandir"><img class="vetorexpandir" src="expand_more.png"></div>
                             <button class="voltar"><img class="volt" src="[Botão] Voltar.png"></button>
                             <button class="proximo2"><img class="prox" src="[Botão] Próximo (1).png"></button>
                         </div>
-                    </div>
+                    </div> -->
                     
                 </div>
             </div>
@@ -167,6 +149,7 @@
             
         </footer>
         
+        <!-- POPUP DE TASK -->
         <div class="popup-wrapper">
             <div class="popup">
                 <div class="popup-close">
@@ -188,28 +171,88 @@
                 </div>
             </div>
         </div>
-
         <script>
-            function lista(){
-            const titulo = document.getElementById('inputtitulo');
-            const valorTitulo = titulo.value;
-            titulo.value = "";
-            console.log(valorTitulo);
-            const descricao = document.getElementById('txtdescricao');
-            const valorDescricao = descricao.value;
-            descricao.value = "";
-            console.log(valorDescricao);
+            function lista() {
+                const titulo = document.getElementById('inputtitulo');
+                const valorTitulo = titulo.value;
+                titulo.value = "";
+                console.log(valorTitulo);
+                const descricao = document.getElementById('txtdescricao');
+                const valorDescricao = descricao.value;
+                descricao.value = "";
+                console.log(valorDescricao);
+            
+                const fazer = document.getElementById('scroll');
+            
+                const caixa = document.createElement('div');
+                caixa.classList.add('task');
+                fazer.appendChild(caixa);
 
-            const fazer = document.getElementById('scroll');
+                const cima = document.createElement('div');
+                cima.classList.add('cima');
+                caixa.appendChild(cima);
+            
+                const tit = document.createElement('div');
+                tit.classList.add('tasktitilo');
+                tit.innerHTML = valorTitulo;
+                cima.appendChild(tit);
 
-            const div = document.createElement('div');
-            fazer.appendChild(div);
+                const more = document.createElement('span');
+                more.innerHTML = '<span class="material-icons" id= more >more_vert</span>';
+                cima.appendChild(more);
+                
+                const baixo = document.createElement('div');
+                baixo.classList.add('baixo');
+                caixa.appendChild(baixo);
 
-            const p = document.createElement('p');
-            p.innerHTML = valorTitulo;
-            div.appendChild;
-        }
-        </script>
+                const des = document.createElement('div');
+                des.classList.add('descricao');
+                des.innerHTML = "Ler descrição";
+                baixo.appendChild(des);
+
+                const expand = document.createElement('span');
+                expand.innerHTML = '<span class="material-icons-outlined" id=expand >expand_more</span>';
+                baixo.appendChild(expand);
+
+                const prox = document.createElement('button');
+                prox.classList.add('proximo');
+                baixo.appendChild(prox);
+
+                const seta = document.createElement('span');
+                seta.innerHTML = '<span class="material-icons-outlined" id=seta>arrow_forward_ios</span>';
+                prox.appendChild(seta);
+
+
+                const option = document.getElementById("more");
+            
+                option.addEventListener("click", function() {
+                if (!document.getElementById("btdel")) {
+                    const btdel = document.createElement('button');
+                    btdel.id = "btdel";
+                    btdel.classList.add('btexcluir');
+                    baixo.appendChild(btdel);
+
+                    const icondel = document.createElement('span');
+                    icondel.innerHTML = '<span class="material-icons-outlined" id="icondel">delete_outline</span>';
+                    btdel.appendChild(icondel);
+
+                    const excluir = document.createElement('div');
+                    excluir.classList.add('excluir');
+                    excluir.innerHTML = "Excluir";
+                    btdel.appendChild(excluir);
+                }
+                });
+
+
+            }
+            
+          </script>
+          
+
+        <!-- <button class="btexcluir" id="btexcluir">
+          <div class="imgexcluir"><img src="delete_outline.png"></div>
+          <div class="excluir">Excluir</div>
+        </button> -->
 
         <script>
             // Seleciona o botão de adicionar tarefa
@@ -231,41 +274,6 @@
             popup.style.display = "none";
             });
         </script>
-
-        <!-- <script>
-            function adicionarTarefa() {
-            // Selecione o campo de título da nova tarefa
-            const tituloCampo = document.querySelector('.campocinza1 .inputtitulo');
-
-            // Selecione o campo de descrição da nova tarefa
-            const descricaoCampo = document.querySelector('.campocinza2 .txtdescricao');
-
-            // Obtenha o valor dos campos de título e descrição
-            const titulo = tituloCampo.innerText;
-            const descricao = descricaoCampo.innerText;
-
-            // Crie um objeto que representa a nova tarefa
-            const novaTarefa = { titulo, descricao };
-
-            // Adicione a nova tarefa a um array de tarefas existente ou crie um novo array
-            const tarefas = JSON.parse(localStorage.getItem('tarefas')) || [];
-            tarefas.push(novaTarefa);
-
-            // Salve o array de tarefas atualizado no armazenamento local
-            localStorage.setItem('tarefas', JSON.stringify(tarefas));
-
-            // Limpe os campos de título e descrição
-            tituloCampo.innerText = '';
-            descricaoCampo.innerText = '';
-
-            // Feche a janela popup
-            const popup = document.querySelector(".popup-wrapper");
-            popup.style.display = "none";
-
-            // Atualize a lista de tarefas na tela
-            atualizarListaTarefas();
-            }
-        </script> -->
 
         <div class="popup-frasedia" onload="exibirFraseAleatoriaPop()">
             <div class="popupfrase">
@@ -301,6 +309,7 @@
             });
 
         </script>
+
         <script>
             // Array com frases pre-cadastradas
             const frases = [
