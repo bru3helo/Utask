@@ -50,10 +50,10 @@
                     <div class="fazer">A fazer</div>
                     <button id="addbt"> <img class="img" src="[Botão] Adicionar task.png"> </button>
                 </div>
-                <div class="setaesquerda"><img src="navigate_before.png"></div>
+                
                 <div class="caixa1" id="fazer">
                     <div id="scroll"></div>
-                    <div class="setadireita"><img src="navigate_next.png"></div>
+                    
                 </div>     
                 </section>
             
@@ -65,9 +65,40 @@
             <section class="container5">
                 <div class="feito">Feito </div>
                 <div class="caixa1" id="feito"></div>
-            </section>
-
+            </section> 
         </div>
+
+        <section class="carrossel">
+            <button class="setaesquerda"><img src="navigate_before.png"></button>
+            <ul class="slider">
+                <li>
+                    <section class="container3 slides" id="slide1">
+                        <div class="linha">
+                            <div class="fazer">A fazer</div>
+                            <button id="addbt"> <img class="img" src="[Botão] Adicionar task.png"> </button>
+                        </div>
+                        
+                        <div class="caixa1 " id="fazer">
+                            <div id="scroll"></div>
+                            
+                        </div>     
+                        </section>
+                </li>
+                <li>
+                    <section class="container4 slides" id="slide2">
+                        <div class="andamento">Em andamento </div>
+                        <div class="caixa1" id="andamento"> </div>
+                    </section>
+                </li>
+                <li>
+                    <section class="container5 slides" id="slide3">
+                        <div class="feito">Feito </div>
+                        <div class="caixa1" id="feito"></div>
+                    </section>
+                </li>
+            </ul>
+            <button class="setadireita"><img src="navigate_next.png"></button>
+        </section>
         
         <div class="branco"></div>
         
@@ -84,6 +115,28 @@
             
         </footer>
         
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let carosseis = document.getElementsByClassName('slider')
+                const setaesquerda = document.querySelector('.setaesquerda');
+                const setadireita = document.querySelector('.setadireita');
+                const slide1 = document.getElementById('slide1');
+                const slide2 = document.getElementById('slide2');
+                const slide3 = document.getElementById('slide3');
+
+                setadireita.addEventListener('click', function() {
+                    slide1.style.display = "none";
+                    slide2.style.display = "flex";
+                })
+    
+                setaesquerda.addEventListener('click', function() {
+                    slide1.style.display = "flex";
+                    slide2.style.display = "none";
+                })
+            });
+
+        </script>
+
         <!-- POPUP DE TASK -->
         <div class="popup-wrapper">
             <div class="popup">
@@ -95,116 +148,13 @@
                     <h2 class="txtnovatask">Nova Task</h2>
                     <div class="bluebar"></div>
                     <div class="titulo">Título *</div>
-                    <section class="campocinza1">
-                        <input id="inputtitulo"></input>
-                    </section>
+                        <input class="campocinza1" id="inputtitulo"></input>
                     <div class="popdescricao">Descrição</div>
-                    <section class="campocinza2">
-                        <input id="txtdescricao"></input>
-                    </section>
+                        <input class="campocinza2" id="txtdescricao"></input>
                     <button class="btaddtask" id="criarTask" onclick="lista(contador)">Criar task</button>
                 </div>
             </div>
         </div>
-
-    <script>
-        let contadorExclusao = 0;
-        let contadortasks = 0;
-        let contador= 0;
-        function lista(contador) {
-            contadortasks++;
-            console.log(contadortasks);
-            const titulo = document.getElementById('inputtitulo');
-            const valorTitulo = titulo.value;
-            titulo.value = "";
-            console.log(valorTitulo);
-            const descricao = document.getElementById('txtdescricao');
-            const valorDescricao = descricao.value;
-            descricao.value = "";
-            console.log(valorDescricao);
-
-            const fazer = document.getElementById('scroll');
-            fazer.classList.add(`afazer-${contadortasks}`);
-
-            const caixa = document.createElement('div');
-            caixa.classList.add('task', `afazer-${contadortasks}`);
-            fazer.appendChild(caixa);
-
-            const cima = document.createElement('div');
-            cima.classList.add('cima', `afazer-${contadortasks}`);
-            caixa.appendChild(cima);
-
-            const tit = document.createElement('div');
-            tit.classList.add('tasktitilo', `afazer-${contadortasks}`);
-            tit.innerHTML = valorTitulo;
-            cima.appendChild(tit);
-
-            const more = document.createElement('span');
-            more.innerHTML = `<span class="material-icons afazer-${contadortasks}" id="more">more_vert</span>`;
-            cima.appendChild(more);
-
-            const baixo = document.createElement('div');
-            baixo.classList.add('baixo', `afazer-${contadortasks}`);
-            caixa.appendChild(baixo);
-
-            const des = document.createElement('div');
-            des.classList.add('descricao', `afazer-${contadortasks}`);
-            des.innerHTML = "Ler descrição";
-            baixo.appendChild(des);
-
-            const expand = document.createElement('span');
-            expand.innerHTML = `<span class="material-icons-outlined afazer-${contadortasks}" id="expand">expand_more</span>`;
-            baixo.appendChild(expand);
-
-            const prox = document.createElement('button');
-            prox.classList.add('proximo');
-            prox.id = `btproximo-${contador}`;
-            baixo.appendChild(prox);
-
-            const seta = document.createElement('span');
-            seta.innerHTML = `<span class="material-icons-outlined afazer-${contadortasks}" id="seta">arrow_forward_ios</span>`;
-            prox.appendChild(seta);
-
-            const option = document.getElementById("more");
-
-            option.addEventListener("click", function() {
-            if (!document.getElementById(`btdel-${contadortasks}`)) {
-                contadorExclusao++;
-                const btdel = document.createElement('button');
-                btdel.id = `btdel-${contadortasks}-${contadorExclusao}`;
-                btdel.classList.add('btexcluir', `afazer-${contadortasks}`);
-                baixo.appendChild(btdel);
-
-                const icondel = document.createElement('span');
-                icondel.innerHTML = `<span class="material-icons-outlined afazer-${contadortasks}" id="icondel">delete_outline</span>`;
-                btdel.appendChild(icondel);
-
-                const excluir = document.createElement('div');
-                excluir.classList.add('excluir', `afazer-${contadortasks}`);
-                excluir.innerHTML = "Excluir";
-                btdel.appendChild(excluir);
-            }
-            });
-
-            prox.addEventListener('click', function() {
-            const btnProximo = this; // Botão clicado (próximo)
-            const divOrigem = btnProximo.closest('.task'); // Encontra a div de origem mais próxima
-
-            if (divOrigem) {
-                const divDestino = document.getElementById('andamento');
-
-                // Remove a task da seção de origem
-                divOrigem.parentNode.removeChild(divOrigem);
-
-                // Adiciona a task na seção de destino
-                divDestino.appendChild(divOrigem);
-            }
-            });
-
-
-
-        }   
-    </script>
     
         <script>
             // Seleciona o botão de adicionar tarefa
@@ -220,14 +170,14 @@
             
             // Adiciona evento de clique ao botão de fechar a popup para escondê-la
             closebt.addEventListener("click", function() {
-            popup.style.display = "none";
+                popup.style.display = "none";
             });
             criarTask.addEventListener("click", function() {
-            popup.style.display = "none";
+                popup.style.display = "none";
             });
         </script>
 
-        <div class="popup-frasedia" onload="exibirFraseAleatoriaPop()">
+        <div class="popup-frasedia" onclick="exibirFraseAleatoriaPop()">
             <div class="popupfrase">
                 <div class="popup-closefrase">
                     <img class="btclosefrase" src="[Botão] Fechar.png">
@@ -306,5 +256,107 @@
             }
         </script>
 
+        <script>
+        let contadorExclusao = 0;
+        let contadortasks = 0;
+        let contador= 0;
+        function lista(contador) {
+            contadortasks++;
+            console.log(contadortasks);
+            const titulo = document.getElementById('inputtitulo');
+            const valorTitulo = titulo.value;
+            titulo.value = "";
+            console.log(valorTitulo);
+            const descricao = document.getElementById('txtdescricao');
+            const valorDescricao = descricao.value;
+            descricao.value = "";
+            console.log(valorDescricao);
+
+            const caixa = document.createElement('div');
+            caixa.classList.add('task', `afazer-${contadortasks}`);
+            fazer.appendChild(caixa);
+
+            const cima = document.createElement('div');
+            cima.classList.add('cima', `afazer-${contadortasks}`);
+            caixa.appendChild(cima);
+
+            const tit = document.createElement('div');
+            tit.classList.add('tasktitilo', `afazer-${contadortasks}`);
+            tit.innerHTML = valorTitulo;
+            cima.appendChild(tit);
+
+            const more = document.createElement('span');
+            more.innerHTML = `<span class="material-icons afazer-${contadortasks}" id="more">more_vert</span>`;
+            cima.appendChild(more);
+
+            const baixo = document.createElement('div');
+            baixo.classList.add('baixo', `afazer-${contadortasks}`);
+            caixa.appendChild(baixo);
+
+            const des = document.createElement('div');
+            des.classList.add('descricao', `afazer-${contadortasks}`);
+            des.innerHTML = "Ler descrição";
+            baixo.appendChild(des);
+
+            const expand = document.createElement('span');
+            expand.innerHTML = `<span class="material-icons-outlined afazer-${contadortasks}" id="expand">expand_more</span>`;
+            baixo.appendChild(expand);
+
+            const prox = document.createElement('button');
+            prox.classList.add('proximo');
+            prox.id = `btproximo-${contador}`;
+            baixo.appendChild(prox);
+
+            const seta = document.createElement('span');
+            seta.innerHTML = `<span class="material-icons-outlined afazer-${contadortasks}" id="seta">arrow_forward_ios</span>`;
+            prox.appendChild(seta);
+
+            prox.addEventListener('click', function() {
+                const btnProximo = this; // Botão clicado (próximo)
+                const divOrigem = btnProximo.closest('.task'); // Encontra a div de origem mais próxima
+                const divDestino = document.getElementById('andamento');
+
+                if (divOrigem) {
+                    // Remove o botão anterior
+                    const botaoAnterior = divOrigem.querySelector('.proximo');
+                    if (botaoAnterior) {
+                        botaoAnterior.parentNode.removeChild(botaoAnterior);
+                    }
+
+                    // Remove a task da seção de origem
+                    divOrigem.parentNode.removeChild(divOrigem);
+
+                    // Adiciona a task na seção de destino
+                    divDestino.appendChild(divOrigem);
+                    divOrigem.dataset.origem = 'andamento';
+
+                    // Cria e adiciona o botão "Retornar"
+                    const btreturn = document.createElement('button');
+                    btreturn.classList.add('retornar');
+                    btreturn.id = `btreturn-${contadortasks}`;
+                    divOrigem.querySelector('.baixo').appendChild(btreturn);
+
+                    const setareturn = document.createElement('span');
+                    setareturn.innerHTML = `<span class="material-icons-outlined btreturn-${contadortasks}" id="setareturn">arrow_back_ios</span>`;
+                    btreturn.appendChild(setareturn);
+
+                    const btavancar = document.createElement('button');
+                    btavancar.classList.add('proximo2');
+                    btavancar.id = `btavancar-${contadortasks}`;
+                    divOrigem.querySelector('.baixo').appendChild(btavancar);
+
+                    const setaavancar = document.createElement('span');
+                    setaavancar.innerHTML = `<span class="material-icons-outlined btavancar-${contadortasks}" id="setaavancar">arrow_forward_ios</span>`;
+                    btavancar.appendChild(setaavancar);
+
+                    // Adiciona a classe andamento-${contadortasks} a todos os itens
+                    const items = divOrigem.querySelectorAll(`.afazer-${contadortasks}`);
+                    items.forEach((item) => {
+                        item.classList.add(`andamento-${contadortasks}`);
+                    });
+                }
+            });
+        }   
+        </script>
     </body>
 </html>
