@@ -118,11 +118,11 @@
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 let carosseis = document.getElementsByClassName('slider')
-                const setaesquerda = document.querySelector('.setaesquerda');
-                const setadireita = document.querySelector('.setadireita');
-                const slide1 = document.getElementById('slide1');
-                const slide2 = document.getElementById('slide2');
-                const slide3 = document.getElementById('slide3');
+                var setaesquerda = document.querySelector('.setaesquerda');
+                var setadireita = document.querySelector('.setadireita');
+                var slide1 = document.getElementById('slide1');
+                var slide2 = document.getElementById('slide2');
+                var slide3 = document.getElementById('slide3');
 
                 setadireita.addEventListener('click', function() {
                     slide1.style.display = "none";
@@ -158,12 +158,12 @@
     
         <script>
             // Seleciona o botão de adicionar tarefa
-            const addbt = document.getElementById("addbt");
-            const btadd = document.getElementById("btadd")
+            var addbt = document.getElementById("addbt");
+            var btadd = document.getElementById("btadd")
             // Seleciona a div de popup
-            const popup = document.querySelector(".popup-wrapper");
+            var popup = document.querySelector(".popup-wrapper");
             // Seleciona o botão de fechar a popup
-            const closebt = document.querySelector(".popup-close");
+            var closebt = document.querySelector(".popup-close");
             // Adiciona evento de clique ao botão de adicionar tarefa para exibir a popup
             addbt.addEventListener("click", function() {
             popup.style.display = "block";
@@ -198,11 +198,11 @@
 
         <script>
             // Seleciona o botão de adicionar tarefa
-            const frase = document.getElementById("frasebt");
+            var frase = document.getElementById("frasebt");
             // Seleciona a div de popup
-            const popupfrase = document.querySelector(".popup-frasedia");
+            var popupfrase = document.querySelector(".popup-frasedia");
             // Seleciona o botão de fechar a popup
-            const btclosefrase = document.querySelector(".btclosefrase");
+            var btclosefrase = document.querySelector(".btclosefrase");
             // Adiciona evento de clique ao botão de adicionar tarefa para exibir a popup
             frase.addEventListener("click", function() {
             popupfrase.style.display = "block";
@@ -217,7 +217,7 @@
 
         <script>
             // Array com frases pre-cadastradas
-            const frases = [
+            var frases = [
                 "Se você quer um pedacinho do paraíso, acredite em Deus. Mas se você quer conquistar o mundo, acredite em você porque Deus já te deu tudo o que você precisa para você vencer.",
                 "A felicidade não está em fazer o que a gente quer, e sim em querer o que a gente faz.",
                 "O tempo é uma ilusão. O que realmente importa é o que fazemos com ele.",
@@ -230,10 +230,10 @@
                 "Acredite em si mesmo e você será imparável.",
                 "Não deixe seus medos controlarem sua vida. Enfrente-os e supere-os.",
                 "A vida é curta demais para desperdiçar tempo com coisas que não importam.",
-                "Foque no presente e construa um futuro melhor.",
+                "Foque no presente e varrua um futuro melhor.",
                 "Seja a mudança que você quer ver no mundo.",
                 "Não há atalhos para o sucesso. Trabalhe duro e persevere.",
-                "A felicidade não é algo pronto. Ela é algo que você constrói.",
+                "A felicidade não é algo pronto. Ela é algo que você varrói.",
                 "A vida é uma aventura. Aproveite cada momento.",
                 "Cada novo dia é uma nova oportunidade de aprender algo novo.",
                 "Nunca desista dos seus sonhos. Lute por eles.",
@@ -248,13 +248,13 @@
 
             // Função para exibir uma frase aleatória no elemento HTML
             function exibirFraseAleatoria() {
-                const fraseAleatoria = frases[Math.floor(Math.random() * frases.length)];
-                const elementoFrase = document.getElementById("frase");
+                var fraseAleatoria = frases[Math.floor(Math.random() * frases.length)];
+                var elementoFrase = document.getElementById("frase");
                 elementoFrase.innerHTML = fraseAleatoria;
             }
             function exibirFraseAleatoriaPop() {
-                const fraseAleatoriapop = frases[Math.floor(Math.random() * frases.length)];
-                const elementoFrasepop = document.getElementById("popup-frasedia");
+                var fraseAleatoriapop = frases[Math.floor(Math.random() * frases.length)];
+                var elementoFrasepop = document.getElementById("popup-frasedia");
                 elementoFrasepop.innerHTML = fraseAleatoriapop;
             }
         </script>
@@ -266,64 +266,64 @@
         function lista(contador) {
             contadortasks++;
             console.log(contadortasks);
-            const titulo = document.getElementById('inputtitulo');
-            const valorTitulo = titulo.value;
+            var titulo = document.getElementById('inputtitulo');
+            var valorTitulo = titulo.value;
             titulo.value = "";
             console.log(valorTitulo);
-            const descricao = document.getElementById('txtdescricao');
-            const valorDescricao = descricao.value;
+            var descricao = document.getElementById('txtdescricao');
+            var valorDescricao = descricao.value;
             descricao.value = "";
             console.log(valorDescricao);
 
-            const fazer = document.getElementById("fazer");
-            const fazer2 =document.getElementById("slide1");
-            const caixa = document.createElement('div');
+            var fazer = document.getElementById("fazer");
+            var fazer2 =document.getElementById("slide1");
+            var caixa = document.createElement('div');
             caixa.classList.add('task', `afazer-${contadortasks}`);
             fazer.appendChild(caixa);
 
-            const cima = document.createElement('div');
+            var cima = document.createElement('div');
             cima.classList.add('cima', `afazer-${contadortasks}`);
             caixa.appendChild(cima);
 
-            const tit = document.createElement('div');
+            var tit = document.createElement('div');
             tit.classList.add('tasktitilo', `afazer-${contadortasks}`);
             tit.innerHTML = valorTitulo;
             cima.appendChild(tit);
 
-            const more = document.createElement('span');
+            var more = document.createElement('span');
             more.innerHTML = `<span class="material-icons afazer-${contadortasks}" id="more">more_vert</span>`;
             cima.appendChild(more);
 
-            const baixo = document.createElement('div');
+            var baixo = document.createElement('div');
             baixo.classList.add('baixo', `afazer-${contadortasks}`);
             caixa.appendChild(baixo);
 
-            const des = document.createElement('div');
+            var des = document.createElement('div');
             des.classList.add('descricao', `afazer-${contadortasks}`);
             des.innerHTML = "Ler descrição";
             baixo.appendChild(des);
 
-            const expand = document.createElement('span');
+            var expand = document.createElement('span');
             expand.innerHTML = `<span class="material-icons-outlined afazer-${contadortasks}" id="expand">expand_more</span>`;
             baixo.appendChild(expand);
 
-            const prox = document.createElement('button');
+            var prox = document.createElement('button');
             prox.classList.add('proximo');
             prox.id = `btproximo-${contador}`;
             baixo.appendChild(prox);
 
-            const seta = document.createElement('span');
+            var seta = document.createElement('span');
             seta.innerHTML = `<span class="material-icons-outlined afazer-${contadortasks}" id="seta">arrow_forward_ios</span>`;
             prox.appendChild(seta);
 
             prox.addEventListener('click', function() {
-                const btnProximo = this; // Botão clicado (próximo)
-                const divOrigem = btnProximo.closest('.task'); // Encontra a div de origem mais próxima
-                const divDestino = document.getElementById('andamento');
+                var btnProximo = this; // Botão clicado (próximo)
+                var divOrigem = btnProximo.closest('.task'); // Encontra a div de origem mais próxima
+                var divDestino = document.getElementById('andamento');
 
                 if (divOrigem) {
                     // Remove o botão anterior
-                    const botaoAnterior = divOrigem.querySelector('.proximo');
+                    var botaoAnterior = divOrigem.querySelector('.proximo');
                     if (botaoAnterior) {
                         botaoAnterior.parentNode.removeChild(botaoAnterior);
                     }
@@ -336,26 +336,26 @@
                     divOrigem.dataset.origem = 'andamento';
 
                     // Cria e adiciona o botão "Retornar"
-                    const btreturn = document.createElement('button');
+                    var btreturn = document.createElement('button');
                     btreturn.classList.add('retornar');
                     btreturn.id = `btreturn-${contadortasks}`;
                     divOrigem.querySelector('.baixo').appendChild(btreturn);
 
-                    const setareturn = document.createElement('span');
+                    var setareturn = document.createElement('span');
                     setareturn.innerHTML = `<span class="material-icons-outlined btreturn-${contadortasks}" id="setareturn">arrow_back_ios</span>`;
                     btreturn.appendChild(setareturn);
 
-                    const btavancar = document.createElement('button');
+                    var btavancar = document.createElement('button');
                     btavancar.classList.add('proximo2');
                     btavancar.id = `btavancar-${contadortasks}`;
                     divOrigem.querySelector('.baixo').appendChild(btavancar);
 
-                    const setaavancar = document.createElement('span');
+                    var setaavancar = document.createElement('span');
                     setaavancar.innerHTML = `<span class="material-icons-outlined btavancar-${contadortasks}" id="setaavancar">arrow_forward_ios</span>`;
                     btavancar.appendChild(setaavancar);
 
                     // Adiciona a classe andamento-${contadortasks} a todos os itens
-                    const items = divOrigem.querySelectorAll(`.afazer-${contadortasks}`);
+                    var items = divOrigem.querySelectorAll(`.afazer-${contadortasks}`);
                     items.forEach((item) => {
                         item.classList.add(`andamento-${contadortasks}`);
                     });
