@@ -30,7 +30,7 @@
         </header>
         <div class="caixafrasecont">
             <div class="caixafrase">
-                <div class="alinhar">
+                <div class="alinhar" onclick="exibirFraseAleatoriaPop()">
                     <div class="logolamp">
                     <img src="iconelampada.png">
                     </div>
@@ -75,7 +75,7 @@
                     <section class="container3 slides" id="slide1">
                         <div class="linha">
                             <div class="fazer">A fazer</div>
-                            <button id="addbt"> <img class="img" src="[Botão] Adicionar task.png"> </button>
+                            <button class="addbt" id="btadd"> <img class="img" src="[Botão] Adicionar task.png"> </button>
                         </div>
                         
                         <div class="caixa1 " id="fazer">
@@ -159,6 +159,7 @@
         <script>
             // Seleciona o botão de adicionar tarefa
             const addbt = document.getElementById("addbt");
+            const btadd = document.getElementById("btadd")
             // Seleciona a div de popup
             const popup = document.querySelector(".popup-wrapper");
             // Seleciona o botão de fechar a popup
@@ -167,7 +168,9 @@
             addbt.addEventListener("click", function() {
             popup.style.display = "block";
             });
-            
+            btadd.addEventListener("click", function() {
+            popup.style.display = "block";
+            });
             // Adiciona evento de clique ao botão de fechar a popup para escondê-la
             closebt.addEventListener("click", function() {
                 popup.style.display = "none";
@@ -177,7 +180,7 @@
             });
         </script>
 
-        <div class="popup-frasedia" onclick="exibirFraseAleatoriaPop()">
+        <div class="popup-frasedia" >
             <div class="popupfrase">
                 <div class="popup-closefrase">
                     <img class="btclosefrase" src="[Botão] Fechar.png">
@@ -188,7 +191,7 @@
                         <img src="iconelampada.png">
                     </div>
                     <div class="frasepop">Frase do dia</div>
-                    <div id="frasespop"></div>
+                    <div id="popup-frasedia"></div>
                 </div>
             </div>
         </div>
@@ -251,7 +254,7 @@
             }
             function exibirFraseAleatoriaPop() {
                 const fraseAleatoriapop = frases[Math.floor(Math.random() * frases.length)];
-                const elementoFrasepop = document.getElementById("frasespop");
+                const elementoFrasepop = document.getElementById("popup-frasedia");
                 elementoFrasepop.innerHTML = fraseAleatoriapop;
             }
         </script>
@@ -272,6 +275,8 @@
             descricao.value = "";
             console.log(valorDescricao);
 
+            const fazer = document.getElementById("fazer");
+            const fazer2 =document.getElementById("slide1");
             const caixa = document.createElement('div');
             caixa.classList.add('task', `afazer-${contadortasks}`);
             fazer.appendChild(caixa);
